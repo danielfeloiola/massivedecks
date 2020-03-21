@@ -1069,7 +1069,7 @@ translate mdString =
             [ Text "English (British)" ]
 
         Português ->
-            [ Text "Português (brasileiro)" ]
+            [ Text "Português brasileiro" ]
 
 
 an : Maybe Int -> String

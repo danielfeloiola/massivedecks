@@ -463,8 +463,7 @@ startGameProblems wrap wrapLobby users model remote =
                     Strings.NeedAtLeastOneDeck
                     [ { description = Strings.NoDecksHint
                       , icon = Icon.plus
-                      , action = "AG3X3" |> Cardcast.playCode |> Source.Cardcast |> Decks.Add |> DecksMsg |> wrap,
-                      , action = "YQEYY" |> Cardcast.playCode |> Source.Cardcast |> Decks.Add |> DecksMsg |> wrap
+                      , action = "AG3X3" |> Cardcast.playCode |> Source.Cardcast |> Decks.Add |> DecksMsg |> wrap
                       }
                     ]
                     |> Just

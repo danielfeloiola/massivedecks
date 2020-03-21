@@ -694,7 +694,7 @@ translate mdString =
             [ Text "Cardcast" ]
 
         CardcastPlayCode ->
-            [ Ref Cardcast, Text " código do jogo" ]
+            [ Text " Código do deck", Ref Cardcast  ]
 
         CardcastEmptyPlayCode ->
             [ Text "Enter a ", Ref CardcastPlayCode, Text " for the deck you want to add." ]

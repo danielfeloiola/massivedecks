@@ -9,7 +9,7 @@ services:
         image: "massivedecks/server:latest"
         environment:
             - NODE_ENV=production
-            - MD_SECRET=hsdhfbsjkhdfbjhsbdfjhbs
+            - MD_SECRET=hgaskdfghkjhsabdfkusahdf
         networks:
             - internal
         restart: unless-stopped

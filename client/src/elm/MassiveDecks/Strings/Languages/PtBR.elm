@@ -489,83 +489,83 @@ translate mdString =
                 ]
 
         Cast ->
-            [ Text "Cast to TV." ]
+            [ Text "Transmitir para TV." ]
 
         CastConnecting ->
-            [ Text "Connecting…" ]
+            [ Text "Conectando…" ]
 
         CastConnected { deviceName } ->
-            [ Text "Casting to ", Text deviceName, Text "." ]
+            [ Text "Transmitindo para ", Text deviceName, Text "." ]
 
         Players ->
             [ Ref (Plural { singular = Player, amount = Nothing }) ]
 
         PlayersDescription ->
-            [ Text "Users playing the game." ]
+            [ Text "Usuários jogando o jogo." ]
 
         Spectators ->
             [ Ref (Plural { singular = Spectator, amount = Nothing }) ]
 
         SpectatorsDescription ->
-            [ Text "Users watching the game without playing." ]
+            [ Text "Usuários jogando o jogo sem jogar." ]
 
         Left ->
             [ Text "Left" ]
 
         LeftDescription ->
-            [ Text "Users who have left the game." ]
+            [ Text "Usuários que abandonaram o jogo." ]
 
         Away ->
-            [ Text "Away" ]
+            [ Text "Fora" ]
 
         AwayDescription ->
-            [ Text "This user is temporarily away from the game." ]
+            [ Text "Este usuário está temporariamente fora do jogo." ]
 
         Disconnected ->
-            [ Text "Disconnected" ]
+            [ Text "Desconectado" ]
 
         DisconnectedDescription ->
-            [ Text "This user is not connected to the game." ]
+            [ Text "Este usuário não está conectado no jogo." ]
 
         Privileged ->
-            [ Text "Owner" ]
+            [ Text "Proprietário" ]
 
         PrivilegedDescription ->
-            [ Text "This user can adjust settings in the game." ]
+            [ Text "Este usuário pode ajustar as configurações do jogo." ]
 
         Ai ->
             [ Text "AI" ]
 
         AiDescription ->
-            [ Text "This player is controlled by the computer." ]
+            [ Text "Este jogador é controlado pelo computador." ]
 
         Score { total } ->
             [ Text (String.fromInt total) ]
 
         ScoreDescription ->
-            [ Text "The number of "
+            [ Text "O número de "
             , Ref (Plural { singular = Point, amount = Nothing })
-            , Text " this player has."
+            , Text " que este jogador tem."
             ]
 
         Likes { total } ->
             [ Text (String.fromInt total) ]
 
         LikesDescription ->
-            [ Text "The number of likes received."
+            [ Text "O número de likes recebidos."
             ]
 
         ToggleUserList ->
-            [ Text "Show or hide the scoreboard." ]
+            [ Text "Mostrar ou esconder a pontuação." ]
 
         GameMenu ->
-            [ Text "Game menu." ]
+            [ Text "Menu do jogo." ]
 
         UnknownUser ->
-            [ Text "An unknown user" ]
+            [ Text "Um usuário desconhecido" ]
 
         InvitePlayers ->
-            [ Text "Invite Players" ]
+            [ Text "Convidar jogadores" ]
 
         InvitePlayersDescription ->
             [ Text "Get the game code/link/qr code to let others join this game." ]
@@ -577,22 +577,22 @@ translate mdString =
             [ Text "Mark As Back" ]
 
         LeaveGame ->
-            [ Text "Leave Game" ]
+            [ Text "Sair do jogo" ]
 
         LeaveGameDescription ->
-            [ Text "Permanently leave the game." ]
+            [ Text "Sair permanentemente do jogo." ]
 
         Spectate ->
-            [ Text "Spectator View" ]
+            [ Text "Assisitir" ]
 
         SpectateDescription ->
-            [ Text "Open a spectator's view of the game in a new tab/window." ]
+            [ Text "Abre uma tela de espectador em uma nova aba." ]
 
         BecomeSpectator ->
-            [ Text "Spectate" ]
+            [ Text "Assitir" ]
 
         BecomeSpectatorDescription ->
-            [ Text "Just watch the game without playing." ]
+            [ Text "Assista ao jogo sem jogar." ]
 
         BecomePlayer ->
             [ Text "Play" ]
@@ -601,59 +601,59 @@ translate mdString =
             [ Text "Play in the game." ]
 
         EndGame ->
-            [ Text "End Game" ]
+            [ Text "Terminar partida" ]
 
         EndGameDescription ->
-            [ Text "End the game now." ]
+            [ Text "Termina a partida agora." ]
 
         ReturnViewToGame ->
-            [ Text "Return" ]
+            [ Text "Voltar" ]
 
         ReturnViewToGameDescription ->
             [ Text "Return to the main game view." ]
 
         ViewConfgiuration ->
-            [ Text "Configure" ]
+            [ Text "Configurar" ]
 
         ViewConfgiurationDescription ->
             [ Text "Switch to view the game's configuration." ]
 
         KickUser ->
-            [ Text "Kick" ]
+            [ Text "Expulsar" ]
 
         Promote ->
-            [ Text "Promote" ]
+            [ Text "Promover" ]
 
         Demote ->
-            [ Text "Demote" ]
+            [ Text "Demover" ]
 
         -- Notifications
         UserConnected { username } ->
-            [ Text username, Text " has reconnected to the game." ]
+            [ Text username, Text " se reconectou." ]
 
         UserDisconnected { username } ->
-            [ Text username, Text " has disconnected from the game." ]
+            [ Text username, Text " se desconectou." ]
 
         UserJoined { username } ->
-            [ Text username, Text " has joined the game." ]
+            [ Text username, Text " entrou no jogo." ]
 
         UserLeft { username } ->
-            [ Text username, Text " has left the game." ]
+            [ Text username, Text " saiu do jogo." ]
 
         UserKicked { username } ->
-            [ Text username, Text " has been kicked from the game." ]
+            [ Text username, Text " foi expulso do jogo." ]
 
         Dismiss ->
-            [ Text "Dismiss" ]
+            [ Text "Dispensar" ]
 
         -- Configuration
         ConfigureTitle ->
-            [ Text "Game Setup" ]
+            [ Text "Ajustes do jogo" ]
 
         NoDecks ->
             [ Segment [ Text "No decks. " ]
             , Text " "
-            , Segment [ Text "You will need to add at least one to the game." ]
+            , Segment [ Text "Você vai precisar de pelo menos um deck para jopgar." ]
             ]
 
         NoDecksHint ->

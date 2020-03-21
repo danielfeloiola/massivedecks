@@ -84,7 +84,7 @@ view _ { wrap, shared, model, remote, canEdit } =
         hint =
             if canEdit then
                 Components.linkButton
-                    [ "CAHBS" |> Cardcast.playCode |> Source.Cardcast |> Add |> wrap |> HtmlE.onClick
+                    [ "AG3X3" |> Cardcast.playCode |> Source.Cardcast |> Add |> wrap |> HtmlE.onClick
                     ]
                     [ Strings.NoDecksHint |> Lang.html shared ]
 

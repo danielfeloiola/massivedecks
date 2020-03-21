@@ -595,10 +595,10 @@ translate mdString =
             [ Text "Assista ao jogo sem jogar." ]
 
         BecomePlayer ->
-            [ Text "Play" ]
+            [ Text "Jogar" ]
 
         BecomePlayerDescription ->
-            [ Text "Play in the game." ]
+            [ Text "Jogar nessa partida." ]
 
         EndGame ->
             [ Text "Terminar partida" ]
@@ -610,13 +610,13 @@ translate mdString =
             [ Text "Voltar" ]
 
         ReturnViewToGameDescription ->
-            [ Text "Return to the main game view." ]
+            [ Text "Volter para a tela principal do jogo." ]
 
         ViewConfgiuration ->
             [ Text "Configurar" ]
 
         ViewConfgiurationDescription ->
-            [ Text "Switch to view the game's configuration." ]
+            [ Text "Veja as configurações do jogo." ]
 
         KickUser ->
             [ Text "Expulsar" ]
@@ -653,7 +653,7 @@ translate mdString =
         NoDecks ->
             [ Segment [ Text "Nenhum deck. " ]
             , Text " "
-            , Segment [ Text "Você vai precisar de pelo menos um deck para jopgar." ]
+            , Segment [ Text "Você vai precisar de pelo menos um deck para jogar." ]
             ]
 
         NoDecksHint ->
@@ -694,10 +694,10 @@ translate mdString =
             [ Text "Cardcast" ]
 
         CardcastPlayCode ->
-            [ Text " Código do deck", Ref Cardcast  ]
+            [ Text " código do deck ", Ref Cardcast  ]
 
         CardcastEmptyPlayCode ->
-            [ Text "Digite o ", Ref CardcastPlayCode, Text " para o deck que deseja adicionar." ]
+            [ Text "Digite o ", Ref CardcastPlayCode, Text " para o adicionar." ]
 
         APlayer ->
             [ Text "Um jogador" ]

@@ -163,8 +163,10 @@ languagesDict =
 pack : Language -> Translation.Pack
 pack language =
     case language of
+        PtBR ->
+            PtBRLang.pack
+
         En ->
             EnLang.pack
 
-        PtBR ->
-            PtBRLang.pack
+      

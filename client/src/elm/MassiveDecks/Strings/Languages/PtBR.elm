@@ -1,4 +1,4 @@
-module MassiveDecks.Strings.Languages.En exposing (pack)
+module MassiveDecks.Strings.Languages.PtBR exposing (pack)
 
 {-| General English-language translation.
 This is the primary language, strings here are the canonical representation, and are suitable to translate from.

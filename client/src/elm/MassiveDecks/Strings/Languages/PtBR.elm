@@ -651,7 +651,7 @@ translate mdString =
             [ Text "Ajustes do jogo" ]
 
         NoDecks ->
-            [ Segment [ Text "No decks. " ]
+            [ Segment [ Text "Nenhum deck. " ]
             , Text " "
             , Segment [ Text "Você vai precisar de pelo menos um deck para jopgar." ]
             ]
@@ -679,16 +679,16 @@ translate mdString =
             ]
 
         AddDeck ->
-            [ Text "Add deck." ]
+            [ Text "Adicionar deck." ]
 
         RemoveDeck ->
-            [ Text "Remove deck." ]
+            [ Text "Remover deck." ]
 
         SourceNotFound { source } ->
-            [ Ref source, Text " doesn't recognise the deck you asked for. Check the details you gave are correct." ]
+            [ Ref source, Text " não reconhece o deck que você adicionou. Verifique se os detalhes estão corretos." ]
 
         SourceServiceFailure { source } ->
-            [ Ref source, Text " failed to provide the deck. Please try again later or try another source." ]
+            [ Ref source, Text " carregamento do deck falhou. Tente mais tarde ou de outra fonte." ]
 
         Cardcast ->
             [ Text "Cardcast" ]
@@ -697,7 +697,7 @@ translate mdString =
             [ Text " Código do deck", Ref Cardcast  ]
 
         CardcastEmptyPlayCode ->
-            [ Text "Enter a ", Ref CardcastPlayCode, Text " for the deck you want to add." ]
+            [ Text "Digite o ", Ref CardcastPlayCode, Text " para o deck que deseja adicionar." ]
 
         APlayer ->
             [ Text "Um jogador" ]

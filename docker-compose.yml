@@ -1,21 +1,26 @@
 version: "3"
 
 networks:
-  internal:
+    internal:
 
 services:
-  server:
-    build: ./server
-    image: "massivedecks/server:dev"
-    networks:
-      - internal
-    restart: unless-stopped
+    server:
+        container_name: server
+        image: "massivedecks/server:latest"
+        environment:
+            - NODE_ENV=production
+            - MD_SECRET=hsdhfbsjkhdfbjhsbdfjhbs
+        networks:
+            - internal
+        restart: unless-stopped
 
-  client:
-    build: ./client
-    image: "massivedecks/client:dev"
-    ports:
-      - "8080:8080"
-    networks:
-      - internal
-    restart: unless-stopped
+    client:
+        container_name: client
+        depends_on:
+            - server
+        image: "massivedecks/client:latest"
+        ports:
+            - "80:8080"
+        networks:
+            - internal
+        restart: unless-stopped

@@ -390,7 +390,7 @@ translate mdString =
             [ Text "Dê esse código para as pessoas para que elas entrem no seu jogo." ]
 
         GameCodeHowToAcquire ->
-            [ Text "Peça para a pessoa que te convidou pelo", Ref GameCodeTerm, Text "." ]
+            [ Text "Peça para a pessoa que te convidou o ", Ref GameCodeTerm, Text "." ]
 
         Deck ->
             [ Text "Deck" ]

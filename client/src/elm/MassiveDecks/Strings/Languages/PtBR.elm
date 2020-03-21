@@ -45,41 +45,41 @@ translate mdString =
             [ Text "Versão “", Text versionNumber, Text "”" ]
 
         ShortGameDescription ->
-            [ Text "Um jogo de festa para pessoas horríveis." ]
+            [ Text "Um jogo para pessoas horríveis." ]
 
         WhatIsThis ->
             [ Text "O que é ", Ref MassiveDecks, Text "?" ]
 
         GameDescription ->
             [ Ref MassiveDecks
-            , Text " is a comedy party game based on "
+            , Text " é um jogo de comédia baseado no "
             , Ref CardsAgainstHumanity
-            , Text ", developed by "
+            , Text ", pesenvolvido por "
             , Ref RereadGames
-            , Text " and other contributors—the game is open source under "
+            , Text " e outros contribuidores—esse jogo é de código aberto sob "
             , Ref License
-            , Text ", so you can help improve the game, access the source code, or just find out more at "
+            , Text ", ajudar a melhorar o jogo, acessar o código-fonte, ou descobrir mais em "
             , Ref MDProject
             , Text "."
             ]
 
         NewGame ->
-            [ Text "New" ]
+            [ Text "Novo" ]
 
         FindPublicGame ->
-            [ Text "Find" ]
+            [ Text "Encontrar" ]
 
         JoinPrivateGame ->
-            [ Text "Join" ]
+            [ Text "Entrar" ]
 
         PlayGame ->
-            [ Text "Play" ]
+            [ Text "Jogar" ]
 
         AboutTheGame ->
-            [ Text "About" ]
+            [ Text "Sobre" ]
 
         AboutTheGameDescription ->
-            [ Text "Find out about ", Ref MassiveDecks, Text " and how it is developed." ]
+            [ Text "Saiba mais ", Ref MassiveDecks, Text " e como foi desenvolvido." ]
 
         MDLogoDescription ->
             [ Text "A ", Ref Call, Text " and a ", Ref Response, Text " marked with an “M” and a “D”." ]
@@ -88,13 +88,13 @@ translate mdString =
             [ Text "A book circled by a recycling arrow." ]
 
         MDProject ->
-            [ Text "the GitHub project" ]
+            [ Text "projeto GitHub" ]
 
         License ->
-            [ Text "the AGPLv3 license" ]
+            [ Text "a licença AGPLv3" ]
 
         DevelopedByReread ->
-            [ Text "Developed by ", Ref RereadGames, Text "." ]
+            [ Text "Desenvolvido por ", Ref RereadGames, Text "." ]
 
         RereadGames ->
             [ Text "Reread Games" ]
@@ -103,19 +103,19 @@ translate mdString =
             [ Text "Your Name" ]
 
         NameInUse ->
-            [ Text "Someone else is using this name in the game—please try a different one." ]
+            [ Text "Alguém já está usando esse nome - escolha outro." ]
 
         RejoinTitle ->
             [ Text "Rejoin Game" ]
 
         RejoinGame { code } ->
-            [ Text "Rejoin “", GameCode { code = code } |> Ref, Text "”." ]
+            [ Text "Reentrar “", GameCode { code = code } |> Ref, Text "”." ]
 
         LobbyRequiresPassword ->
-            [ Text "You need a password to join this game. Try asking the person that invited you." ]
+            [ Text "Você precisa de uma senha para entrar neste jogo. Pergunte a pessoa que te convidou." ]
 
         YouWereKicked ->
-            [ Text "You were kicked from the game." ]
+            [ Text "Você foi expulso do jogo." ]
 
         -- Rules
         CardsAgainstHumanity ->
@@ -277,28 +277,28 @@ translate mdString =
             [ Text "The number of AI players that will be in the game." ]
 
         MustBeMoreThanOrEqualValidationError { min } ->
-            [ Text "The value must be at least ", Text (String.fromInt min), Text "." ]
+            [ Text "O valor precisa ser no mínimo ", Text (String.fromInt min), Text "." ]
 
         MustBeLessThanOrEqualValidationError { max } ->
-            [ Text "The value must be at most  ", Text (String.fromInt max), Text "." ]
+            [ Text "O valor precisa ser no máximo  ", Text (String.fromInt max), Text "." ]
 
         SetValue { value } ->
-            [ Text "Set the value to ", Text (String.fromInt value), Text "." ]
+            [ Text "Ajuste o valor para ", Text (String.fromInt value), Text "." ]
 
         CantBeEmpty ->
-            [ Text "This can't be empty." ]
+            [ Text "Não pode ficar vazio." ]
 
         SettingsTitle ->
-            [ Text "Settings" ]
+            [ Text "Ajustes" ]
 
         LanguageSetting ->
-            [ Text "Language" ]
+            [ Text "Idioma" ]
 
         MissingLanguage ->
-            [ Text "Don’t see your language? ", Ref TranslationBeg ]
+            [ Text "Não encontrou o seu idioma? ", Ref TranslationBeg ]
 
         TranslationBeg ->
-            [ Text "Help translate "
+            [ Text "Ajude a traduzir "
             , Ref MassiveDecks
             , Text "!"
             ]
@@ -348,25 +348,25 @@ translate mdString =
 
         -- Terms
         Czar ->
-            [ Text "Card Czar" ]
+            [ Text "Czar das Cartas" ]
 
         CzarDescription ->
-            [ Text "The player judging the round." ]
+            [ Text "O jogador está julgando a rodada." ]
 
         Player ->
-            [ Text "Player" ]
+            [ Text "Jogador" ]
 
         Spectator ->
-            [ Text "Spectator" ]
+            [ Text "Espectador" ]
 
         Call ->
-            [ Text "Black Card" ]
+            [ Text "Carta Preta" ]
 
         CallDescription ->
             [ Text "A black card with a question or fill-in-the-blank phrase." ]
 
         Response ->
-            [ Text "White Card" ]
+            [ Text "Carta Branca" ]
 
         ResponseDescription ->
             [ Text "A white card with a phrase played into rounds." ]

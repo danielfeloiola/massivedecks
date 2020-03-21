@@ -58,7 +58,7 @@ translate mdString =
             , Ref RereadGames
             , Text " e outros contribuidores—esse jogo é de código aberto sob "
             , Ref License
-            , Text ", ajudar a melhorar o jogo, acessar o código-fonte, ou descobrir mais em "
+            , Text ", ajude a melhorar o jogo, acesse o código-fonte, ou descubra mais no "
             , Ref MDProject
             , Text "."
             ]
@@ -100,13 +100,13 @@ translate mdString =
             [ Text "Reread Games" ]
 
         NameLabel ->
-            [ Text "Your Name" ]
+            [ Text "Seu nome" ]
 
         NameInUse ->
             [ Text "Alguém já está usando esse nome - escolha outro." ]
 
         RejoinTitle ->
-            [ Text "Rejoin Game" ]
+            [ Text "Reentrar no jogo" ]
 
         RejoinGame { code } ->
             [ Text "Reentrar “", GameCode { code = code } |> Ref, Text "”." ]
@@ -378,28 +378,28 @@ translate mdString =
             [ Text "A point—having more means winning." ]
 
         GameCodeTerm ->
-            [ Text "Game Code" ]
+            [ Text "Código do Jogo" ]
 
         GameCodeDescription ->
-            [ Text "A code that lets other people find and join your game." ]
+            [ Text "O código que permite outras pessoas encontrar e entrar no seu jogo." ]
 
         GameCode { code } ->
             [ Text code ]
 
         GameCodeSpecificDescription ->
-            [ Text "Give this game code to people and they can join the game." ]
+            [ Text "Dê esse código para as pessoas para que elas entrem no seu jogo." ]
 
         GameCodeHowToAcquire ->
-            [ Text "Ask the person who invited you for the game’s ", Ref GameCodeTerm, Text "." ]
+            [ Text "Peça para a pessoa que te convidou pelo", Ref GameCodeTerm, Text "." ]
 
         Deck ->
             [ Text "Deck" ]
 
         StillPlaying ->
-            [ Text "Playing" ]
+            [ Text "Jogando" ]
 
         PlayingDescription ->
-            [ Text "This player is in the round, but has not yet submitted a play." ]
+            [ Text "Esse jogador está na partida, mas ainda não fez uma jogada." ]
 
         Played ->
             [ Text "Played" ]

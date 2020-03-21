@@ -38,6 +38,7 @@ import Weightless.Attributes as WlA
 languages : List Language
 languages =
     [ En
+    , PtBR
     ]
 
 
@@ -164,3 +165,6 @@ pack language =
     case language of
         En ->
             EnLang.pack
+
+        PtBR ->
+            PtBRLang.pack

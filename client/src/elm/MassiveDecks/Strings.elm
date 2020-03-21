@@ -312,3 +312,4 @@ type MdString
       -- Language Names
     | English -- The name of the English language (no specific dialect).
     | BritishEnglish -- The name of the British dialect of the English language.
+    | Português -- The name of the Portuguese dialect.

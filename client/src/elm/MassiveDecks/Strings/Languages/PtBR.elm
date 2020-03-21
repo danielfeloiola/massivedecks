@@ -27,7 +27,7 @@ translate mdString =
     case mdString of
         -- General
         MassiveDecks ->
-            [ Text "Massive Decks" ]
+            [ Text "Cartas vs Mari" ]
 
         Close ->
             [ Text "Fechar" ]
@@ -88,7 +88,7 @@ translate mdString =
             [ Text "A book circled by a recycling arrow." ]
 
         MDProject ->
-            [ Text "projeto GitHub" ]
+            [ Text "GitHub" ]
 
         License ->
             [ Text "a licença AGPLv3" ]
@@ -402,7 +402,7 @@ translate mdString =
             [ Text "Esse jogador está na partida, mas ainda não fez uma jogada." ]
 
         Played ->
-            [ Text "Played" ]
+            [ Text "Jogou" ]
 
         PlayedDescription ->
             [ Text "This player has submitted their play for the round." ]
@@ -933,22 +933,22 @@ translate mdString =
             [ Text "You can like plays while you wait for the ", Ref Czar, Text " to reveal the plays and pick a winner for the round." ]
 
         AdvanceRoundInstruction ->
-            [ Text "The next round has started, you can advance." ]
+            [ Text "A próxima rodada já começou. Você pode avançar." ]
 
         -- 404 Unknown
         UnknownPageTitle ->
-            [ Text "404 Error: Unknown page." ]
+            [ Text "Erro 404: Página desconhecida." ]
 
         GoBackHome ->
-            [ Text "Go to the main page." ]
+            [ Text "Voltar para a página inicial." ]
 
         -- Actions
         Refresh ->
-            [ Text "Refresh" ]
+            [ Text "Atualizar" ]
 
         -- Errors
         Error ->
-            [ Text "Error" ]
+            [ Text "Erro" ]
 
         ErrorHelp ->
             [ Text "The game server might be down, or this might be a bug. Refreshing the page should get you going "
@@ -1010,34 +1010,34 @@ translate mdString =
             [ Text "Someone else changed the configuration before you, your change was not saved." ]
 
         UnprivilegedError ->
-            [ Text "You don't have the privileges to do that." ]
+            [ Text "Você não tem os privilégios para fazer isto." ]
 
         GameNotStartedError ->
-            [ Text "The game needs to started to do that." ]
+            [ Text "O jogo deve ser reiniciado para fazer isto." ]
 
         InvalidActionError { reason } ->
-            [ Text "The server didn't understand a request from the client. Details: ", Text reason ]
+            [ Text "O servidor não entendeu a requisição do cliente. Detalhes: ", Text reason ]
 
         AuthenticationError ->
-            [ Text "You can't join that game." ]
+            [ Text "Você não pode entrar nesse jogo." ]
 
         IncorrectIssuerError ->
-            [ Text "Your credentials to join this game are out of date, the game no longer exists." ]
+            [ Text "Suas credenciais estão desatualizadas, o jogo não existe mais." ]
 
         InvalidAuthenticationError ->
-            [ Text "Your credentials to join this game are corrupt." ]
+            [ Text "Suas credenciais estão com problema." ]
 
         InvalidLobbyPasswordError ->
-            [ Text "The game password you gave was wrong. Try typing it again and if it still doesn't work, ask the person who invited you again." ]
+            [ Text "A senha está incorreta. Tente outra vez ou pergunte a quem te enviou." ]
 
         AlreadyLeftError ->
-            [ Text "You have already left this game." ]
+            [ Text "Você já saiu do jogo." ]
 
         LobbyNotFoundError ->
-            [ Text "That game doesn't exist." ]
+            [ Text "O jogo não existe." ]
 
         LobbyClosedError { gameCode } ->
-            [ Text "The game you wish to join (", Ref (GameCode { code = gameCode }), Text ") has ended." ]
+            [ Text "O jogo (", Ref (GameCode { code = gameCode }), Text ") já acabou." ]
 
         LobbyDoesNotExistError { gameCode } ->
             [ Text "The game code you entered ("
@@ -1050,9 +1050,9 @@ translate mdString =
             [ Text "Problem while joining the game." ]
 
         UsernameAlreadyInUseError { username } ->
-            [ Text "Someone is already using the username “"
+            [ Text "Alguém já está sando este nome “"
             , Text username
-            , Text "”—try a different name."
+            , Text "”—tente um nome diferente."
             ]
 
         GameError ->

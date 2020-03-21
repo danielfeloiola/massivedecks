@@ -694,34 +694,34 @@ translate mdString =
             [ Text "Cardcast" ]
 
         CardcastPlayCode ->
-            [ Ref Cardcast, Text " Play Code" ]
+            [ Ref Cardcast, Text " código do jogo" ]
 
         CardcastEmptyPlayCode ->
             [ Text "Enter a ", Ref CardcastPlayCode, Text " for the deck you want to add." ]
 
         APlayer ->
-            [ Text "A Player" ]
+            [ Text "Um jogador" ]
 
         DeckAlreadyAdded ->
-            [ Text "This deck is already in the game." ]
+            [ Text "Este deck já está no jogo." ]
 
         ConfigureDecks ->
             [ Text "Decks" ]
 
         ConfigureRules ->
-            [ Text "Rules" ]
+            [ Text "Regras" ]
 
         ConfigureTimeLimits ->
-            [ Text "Time Limits" ]
+            [ Text "Limite de tempo" ]
 
         ConfigurePrivacy ->
-            [ Text "Privacy" ]
+            [ Text "Privacidade" ]
 
         HandSize ->
-            [ Text "Hand Size" ]
+            [ Text "Tamanho da mão" ]
 
         HandSizeDescription ->
-            [ Text "The base number of cards each player has in their hand during the game." ]
+            [ Text "Número de cartas que cada jogador tem um sua mão durante o jogo." ]
 
         ScoreLimit ->
             [ Ref Point, Text " Limit" ]
@@ -733,7 +733,7 @@ translate mdString =
                 , Text " a player needs to win the game."
                 ]
             , Text " "
-            , Segment [ Text "If disabled, the game continues indefinitely." ]
+            , Segment [ Text "Se desativada o jogo continuará indefinidamente." ]
             ]
 
         UnsavedChangesWarning ->
@@ -745,13 +745,13 @@ translate mdString =
             [ Text "Save your changes." ]
 
         RevertChanges ->
-            [ Text "Discard your unsaved changes." ]
+            [ Text "Descartar mudanças não salvas." ]
 
         NeedAtLeastOneDeck ->
-            [ Text "You need a deck of cards added to start the game." ]
+            [ Text "Você precisa adicionar um deck de cartas para iniciar a partida." ]
 
         NeedAtLeastThreePlayers ->
-            [ Text "You need at least three players to start the game." ]
+            [ Text "Você precisa de pelo menos 3 jogadores para iniciar a partida." ]
 
         NeedAtLeastOneHuman ->
             [ Text "Unfortunately computer players can't be the "
@@ -761,16 +761,16 @@ translate mdString =
             ]
 
         RandoCantWrite ->
-            [ Text "Computer players can't write their own cards." ]
+            [ Text "Jogadores controlados pelo computador não podem escrever as próprias cartas." ]
 
         DisableComedyWriter ->
-            [ Text "Disable ", Ref HouseRuleComedyWriter ]
+            [ Text "Desativado ", Ref HouseRuleComedyWriter ]
 
         DisableRando ->
-            [ Text "Disable ", Ref HouseRuleRandoCardrissian ]
+            [ Text "Desativado ", Ref HouseRuleRandoCardrissian ]
 
         AddAnAiPlayer ->
-            [ Text "Add an AI player to the game." ]
+            [ Text "Adiciona um jogador controlado pelo computador ao jogo." ]
 
         PasswordShared ->
             [ Text "Anyone in the game can see the password! "
@@ -786,28 +786,28 @@ translate mdString =
             ]
 
         LobbyPassword ->
-            [ Text "Game Password" ]
+            [ Text "Senha do jogo" ]
 
         LobbyPasswordDescription ->
-            [ Text "A password to users must enter before they can join the game." ]
+            [ Text "A senha que os usuários devem digitar antes de acessar o jogo." ]
 
         StartGame ->
-            [ Text "Start Game" ]
+            [ Text "Começar Jogo" ]
 
         Public ->
-            [ Text "Public Game" ]
+            [ Text "Jogo público" ]
 
         PublicDescription ->
-            [ Text "If enabled, the game will show up in the public game list for anyone to find." ]
+            [ Text "Se ativado, o jogo aparecerá na lista pública, e poderá ser encontrado por qualquer pessoa." ]
 
         ApplyConfiguration ->
-            [ Text "Apply this change." ]
+            [ Text "Aplicar mudanças." ]
 
         AppliedConfiguration ->
-            [ Text "Saved." ]
+            [ Text "Salvo." ]
 
         InvalidConfiguration ->
-            [ Text "This configuration value isn't valid." ]
+            [ Text "Este valor não é válido." ]
 
         Automatic ->
             [ Text "Automatically Mark Players As Away" ]
@@ -841,10 +841,10 @@ translate mdString =
             ]
 
         YourChanges ->
-            [ Text "Your Changes" ]
+            [ Text "Suas mudanças" ]
 
         TheirChanges ->
-            [ Text "Their Changes" ]
+            [ Text "Mudanças dos outros" ]
 
         -- Game
         SubmitPlay ->

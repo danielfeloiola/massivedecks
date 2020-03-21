@@ -166,5 +166,6 @@ pack language =
         En ->
             EnLang.pack
 
+    case language of
         PtBR ->
             PtBRLang.pack

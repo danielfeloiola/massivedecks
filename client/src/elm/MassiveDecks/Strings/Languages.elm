@@ -33,6 +33,12 @@ import MassiveDecks.Util.String as String
 import Weightless.Attributes as WlA
 
 
+
+import MassiveDecks.Strings.Languages.PtBR as PtBRLang
+
+
+
+
 {-| A list of all the languages enabled in the application, in the order they will be presented to the end-user.
 -}
 languages : List Language

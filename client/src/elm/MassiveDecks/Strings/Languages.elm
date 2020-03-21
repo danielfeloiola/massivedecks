@@ -85,7 +85,7 @@ currentLanguage shared =
 -}
 defaultLanguage : Language
 defaultLanguage =
-    En
+    PtBR
 
 
 {-| Takes a list of IETF language tags and gives back the best language match, if any.

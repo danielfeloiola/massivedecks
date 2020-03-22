@@ -54,7 +54,7 @@ translate mdString =
             [ Ref MassiveDecks
             , Text " é um jogo de comédia baseado no "
             , Ref CardsAgainstHumanity
-            , Text ", pesenvolvido por "
+            , Text ", desenvolvido por "
             , Ref RereadGames
             , Text " e outros contribuidores — esse jogo é de código aberto sob "
             , Ref License
@@ -152,7 +152,7 @@ translate mdString =
             , Ref Call
             , Text " antes de cada resposta. O "
             , Ref Czar
-            , Text " então escolhe a resposta mais divertida, e quem a jogou ganha  "
+            , Text " então escolhe a resposta mais divertida, e quem a jogou ganha um "
             , Ref Point
             , Text "."
             ]
@@ -192,67 +192,67 @@ translate mdString =
             [ Text "Regras da Casa" ]
 
         HouseRules ->
-            [ Text "You can change the way the game is played in a variety of ways. While setting up the game, choose "
-            , Text "as many house rules as you would like to use."
+            [ Text "Você pode mudar a maneira como o jogo é jogado de várias formas. Nas configurações escolha "
+            , Text "quantas regras da cada você quiser usar."
             ]
 
         HouseRuleReboot ->
-            [ Text "Rebooting the Universe" ]
+            [ Text "Resetando o universo" ]
 
         HouseRuleRebootDescription { cost } ->
-            [ Text "At any time, players may trade in "
+            [ Text "A qualquer momento do jogo os jogadores poderão trocar "
             , Text (an cost)
             , Ref (Plural { singular = Point, amount = cost })
-            , Text " to discard their hand and draw a new one."
+            , Text " para descartar a sua mão e pegar uma nova."
             ]
 
         HouseRuleRebootAction { cost } ->
-            [ Text "Spend "
+            [ Text "Gastar "
             , Text (asWord cost)
             , Text " "
             , Ref (Plural { singular = Point, amount = Just cost })
-            , Text " to discard your hand and draw a new one."
+            , Text " para descartar a sua mão e pegar uma nova."
             ]
 
         HouseRuleRebootCost ->
-            [ Ref Point, Text " Cost" ]
+            [ Ref Point, Text " Custo" ]
 
         HouseRuleRebootCostDescription ->
-            [ Text "How many ", Ref (Plural { singular = Point, amount = Nothing }), Text " it costs to redraw." ]
+            [ Text "Quantos ", Ref (Plural { singular = Point, amount = Nothing }), Text " custa para trocar a mão." ]
 
         HouseRulePackingHeat ->
-            [ Text "Packing Heat" ]
+            [ Text "Portador de Armas" ]
 
         HouseRulePackingHeatDescription ->
-            [ Text "Any "
+            [ Text "Qualquer "
             , Ref (Plural { singular = Call, amount = Nothing })
-            , Text " with "
+            , Text " com "
             , Ref (Pick { numberOfCards = 2 })
-            , Text " also get "
+            , Text " também dá direito a "
             , Ref (Draw { numberOfCards = 1 })
-            , Text ", so everyone has more options."
+            , Text ", para que todos tenham mais opções."
             ]
 
         HouseRuleComedyWriter ->
-            [ Text "Comedy Writer" ]
+            [ Text "Modo Comediante" ]
 
         HouseRuleComedyWriterDescription ->
-            [ Text "Add blank "
+            [ Text "Adiciona "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text " where players can write custom responses."
+            , Text " vazias onde os jogadores podem criar respostas customizadas."
             ]
 
         HouseRuleComedyWriterNumber ->
-            [ Text "Blank ", Ref (Plural { singular = Response, amount = Nothing }) ]
+            [ Text "Em branco ", Ref (Plural { singular = Response, amount = Nothing }) ]
 
         HouseRuleComedyWriterNumberDescription ->
-            [ Text "The number of Blank "
+            [ Text "Número de "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text "that will be in the game."
+            , Text "vazias que estarão disponíveis no jogo."
             ]
 
         HouseRuleComedyWriterExclusive ->
-            [ Text "Only Blank ", Ref (Plural { singular = Response, amount = Nothing }) ]
+            [ Text "Apenas ", Ref (Plural { singular = Response, amount = Nothing }), Text "vazias." ]
 
         HouseRuleComedyWriterExclusiveDescription ->
             [ Text "If enabled, all other "

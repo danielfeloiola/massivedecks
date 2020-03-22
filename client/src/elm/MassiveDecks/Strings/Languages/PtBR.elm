@@ -243,12 +243,12 @@ translate mdString =
             ]
 
         HouseRuleComedyWriterNumber ->
-            [ Text "Em branco ", Ref (Plural { singular = Response, amount = Nothing }) ]
+            [ Ref (Plural { singular = Response, amount = Nothing }), Text " vazias", ]
 
         HouseRuleComedyWriterNumberDescription ->
             [ Text "Número de "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text "vazias que estarão disponíveis no jogo."
+            , Text " vazias que estarão disponíveis no jogo."
             ]
 
         HouseRuleComedyWriterExclusive ->
@@ -264,17 +264,17 @@ translate mdString =
             [ Text "Rando Cardrissian" ]
 
         HouseRuleRandoCardrissianDescription ->
-            [ Text "Every round, the first "
+            [ Text "A cada rodada, a primeira "
             , Ref Response
-            , Text " in the deck will be played as an answer. This play belongs to an AI player named "
-            , Text "Rando Cardrissian, and if he wins the game, all players go home in a state of everlasting shame."
+            , Text " no deck será jogada como resposta. Esta jogada pertence a um jogador chamado "
+            , Text "Rando Cardrissian, e se ele ganhar a partida, todos os jogadores serão humilhados para sempre."
             ]
 
         HouseRuleRandoCardrissianNumber ->
-            [ Text "AI Players" ]
+            [ Text "Jogadores controlados pelo computador" ]
 
         HouseRuleRandoCardrissianNumberDescription ->
-            [ Text "The number of AI players that will be in the game." ]
+            [ Text "Número de jogadores controlados pelo computador que estarão neste jogo." ]
 
         MustBeMoreThanOrEqualValidationError { min } ->
             [ Text "O valor precisa ser no mínimo ", Text (String.fromInt min), Text "." ]
@@ -304,32 +304,32 @@ translate mdString =
             ]
 
         CardSizeSetting ->
-            [ Text "Compact Cards" ]
+            [ Text "Cartas compactas" ]
 
         CardSizeExplanation ->
-            [ Text "Adjust how big cards are—this can be useful on small screens to scroll less." ]
+            [ Text "Ajuste o tamanho das castas — útil em telas pequenas para evitar a rolagem." ]
 
         SpeechSetting ->
-            [ Text "Text To Speech" ]
+            [ Text "Text to Speech" ]
 
         SpeechExplanation ->
-            [ Text "Read out cards using text to speech." ]
+            [ Text "Lê as cartas usando text to speech." ]
 
         SpeechNotSupportedExplanation ->
-            [ Text "Your browser does not support text to speech, or has no voices installed." ]
+            [ Text "Seu navegador não suporta text to speech, ou não tem nenhuma voz instalada." ]
 
         VoiceSetting ->
             [ Text "Speech Voice" ]
 
         NotificationsSetting ->
-            [ Text "Browser Notifications" ]
+            [ Text "Notificações no navegador" ]
 
         NotificationsExplanation ->
-            [ Text "Alert you when you need to do something in the game using browser notifications."
+            [ Text "Alerta quando você precisa fazer algo no jogo usando uma notificação no navegador."
             ]
 
         NotificationsUnsupportedExplanation ->
-            [ Text "Your browser doesn't support notifications." ]
+            [ Text "Seu navegador não suporta notificações." ]
 
         NotificationsBrowserPermissions ->
             [ Text "You will need to give permission for "
@@ -657,23 +657,23 @@ translate mdString =
             ]
 
         NoDecksHint ->
-            [ Text "Not sure? Add the original ", Raw CardsAgainstHumanity, Text " deck." ]
+            [ Text "Não tem certeza do que fazer? Adicione o deck de ", Raw CardsAgainstHumanity ]
 
         WaitForDecks ->
-            [ Text "The decks must load before you can start the game." ]
+            [ Text "Os decks precisam ser carregados antes de iniciar a partida." ]
 
         MissingCardType { cardType } ->
-            [ Text "None of your decks contain any "
+            [ Text "OS seus decks não contém nenhuma "
             , Ref (Plural { singular = cardType, amount = Nothing })
-            , Text ". You need a deck that does to start the game."
+            , Text ". Você precisa de um deck com cartas para iniciar o jogo."
             ]
 
         NotEnoughCardsOfType { cardType, needed, have } ->
-            [ Text "For the number of players in the game, you need at least "
+            [ Text "Para o número de jogadores na partida, você precisa de no mínimo "
             , Text (needed |> String.fromInt)
             , Text " "
             , Ref (Plural { singular = cardType, amount = Just needed })
-            , Text " but you only have "
+            , Text " mas você tem apenas "
             , Text (have |> String.fromInt)
             , Text "."
             ]
@@ -754,10 +754,10 @@ translate mdString =
             [ Text "Você precisa de pelo menos 3 jogadores para iniciar a partida." ]
 
         NeedAtLeastOneHuman ->
-            [ Text "Unfortunately computer players can't be the "
+            [ Text "Infelizmente jogadores controlados pelo computador não podem ser o "
             , Ref Czar
-            , Text ", so you need at least one human player to start the game."
-            , Text " (Although only one human might be a bit boring!)"
+            , Text ", então você precisa de no mínimo um humano para iniciar a partida."
+            , Text " (Se bem que com apenas um humano vai ser chato!)"
             ]
 
         RandoCantWrite ->

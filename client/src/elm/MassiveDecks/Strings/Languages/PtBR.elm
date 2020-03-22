@@ -215,7 +215,7 @@ translate mdString =
             ]
 
         HouseRuleRebootCost ->
-            [ Ref Point, Text " Custo" ]
+            [ Ref Point, Text "s necessários" ]
 
         HouseRuleRebootCostDescription ->
             [ Text "Quantos ", Ref (Plural { singular = Point, amount = Nothing }), Text " custa para trocar a mão." ]
@@ -225,7 +225,7 @@ translate mdString =
 
         HouseRulePackingHeatDescription ->
             [ Text "Qualquer "
-            , Ref (Plural { singular = Call, amount = Nothing })
+            , Ref (Singular { singular = Call, amount = Nothing })
             , Text " com "
             , Ref (Pick { numberOfCards = 2 })
             , Text " também dá direito a "

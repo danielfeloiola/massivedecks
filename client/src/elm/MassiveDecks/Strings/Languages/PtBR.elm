@@ -243,7 +243,7 @@ translate mdString =
             ]
 
         HouseRuleComedyWriterNumber ->
-            [ Ref (Plural { singular = Response, amount = Nothing }), Text " vazias", ]
+            [ Ref (Plural { singular = Response, amount = Nothing }), Text " vazias" ]
 
         HouseRuleComedyWriterNumberDescription ->
             [ Text "Número de "
@@ -657,7 +657,7 @@ translate mdString =
             ]
 
         NoDecksHint ->
-            [ Text "Não tem certeza do que fazer? Adicione o deck de ", Raw CardsAgainstHumanity ]
+            [ Text "Não tem certeza do que fazer? Adicione o deck original de ", Raw CardsAgainstHumanity ]
 
         WaitForDecks ->
             [ Text "Os decks precisam ser carregados antes de iniciar a partida." ]

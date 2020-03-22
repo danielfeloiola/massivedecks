@@ -225,7 +225,7 @@ translate mdString =
 
         HouseRulePackingHeatDescription ->
             [ Text "Qualquer "
-            , Ref (Singular { singular = Call, amount = Nothing })
+            , Ref (Plural { singular = Call, amount = Nothing })
             , Text " com "
             , Ref (Pick { numberOfCards = 2 })
             , Text " também dá direito a "
@@ -252,12 +252,12 @@ translate mdString =
             ]
 
         HouseRuleComedyWriterExclusive ->
-            [ Text "Apenas ", Ref (Plural { singular = Response, amount = Nothing }), Text "vazias." ]
+            [ Text "Apenas ", Ref (Plural { singular = Response, amount = Nothing }), Text " vazias." ]
 
         HouseRuleComedyWriterExclusiveDescription ->
-            [ Text "If enabled, all other "
+            [ Text "Se ativado, todas as outras "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text " will be ignored, only blank ones will exist in-game."
+            , Text " serão ignoradas, e apenas cartas vazias aparecerão no jogo."
             ]
 
         HouseRuleRandoCardrissian ->

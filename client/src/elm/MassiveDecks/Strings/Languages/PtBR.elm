@@ -27,7 +27,7 @@ translate mdString =
     case mdString of
         -- General
         MassiveDecks ->
-            [ Text "Cartas vs Mari" ]
+            [ Text "Decks Enormes" ]
 
         Close ->
             [ Text "Fechar" ]
@@ -48,7 +48,7 @@ translate mdString =
             [ Text "Um jogo para pessoas horríveis." ]
 
         WhatIsThis ->
-            [ Text "O que é ", Ref MassiveDecks, Text "?" ]
+            [ Text "O que é o ", Ref MassiveDecks, Text "?" ]
 
         GameDescription ->
             [ Ref MassiveDecks
@@ -56,7 +56,7 @@ translate mdString =
             , Ref CardsAgainstHumanity
             , Text ", pesenvolvido por "
             , Ref RereadGames
-            , Text " e outros contribuidores—esse jogo é de código aberto sob "
+            , Text " e outros contribuidores — esse jogo é de código aberto sob "
             , Ref License
             , Text ", ajude a melhorar o jogo, acesse o código-fonte, ou descubra mais no "
             , Ref MDProject
@@ -82,10 +82,10 @@ translate mdString =
             [ Text "Saiba mais ", Ref MassiveDecks, Text " e como foi desenvolvido." ]
 
         MDLogoDescription ->
-            [ Text "A ", Ref Call, Text " and a ", Ref Response, Text " marked with an “M” and a “D”." ]
+            [ Text "A ", Ref Call, Text " e um ", Ref Response, Text " marcado com um “M” e um “D”." ]
 
         RereadLogoDescription ->
-            [ Text "A book circled by a recycling arrow." ]
+            [ Text "Um livro circulado por uma seta de reciclagem." ]
 
         MDProject ->
             [ Text "GitHub" ]
@@ -106,10 +106,10 @@ translate mdString =
             [ Text "Alguém já está usando esse nome - escolha outro." ]
 
         RejoinTitle ->
-            [ Text "Reentrar no jogo" ]
+            [ Text "Entrar novamente no jogo" ]
 
         RejoinGame { code } ->
-            [ Text "Reentrar “", GameCode { code = code } |> Ref, Text "”." ]
+            [ Text "Entrar novamente “", GameCode { code = code } |> Ref, Text "”." ]
 
         LobbyRequiresPassword ->
             [ Text "Você precisa de uma senha para entrar neste jogo. Pergunte a pessoa que te convidou." ]
@@ -122,37 +122,37 @@ translate mdString =
             [ Text "Cards Against Humanity" ]
 
         Rules ->
-            [ Text "How to play." ]
+            [ Text "Como jogar." ]
 
         RulesHand ->
-            [ Text "Each player has a hand of ", Ref (Plural { singular = Response, amount = Nothing }), Text "." ]
+            [ Text "Cada jogador têm uma mão de ", Ref (Plural { singular = Response, amount = Nothing }), Text "." ]
 
         RulesCzar ->
-            [ Text "The first player begins as the "
+            [ Text "O primeiro jogador começa como o "
             , Ref Czar
-            , Text ". the "
+            , Text ". o "
             , Ref Czar
-            , Text " reads the question or fill-in-the-blank phrase on the "
+            , Text " lê a questão ou frase para preencher as lacunas na "
             , Ref Call
-            , Text " out loud."
+            , Text " para os outros jogadores."
             ]
 
         RulesPlaying ->
-            [ Text "Everyone else answers the question or fills in the blank by choosing a "
+            [ Text "Todos os outros respondem a questão ou preenchem a lacuna escolhendo uma "
             , Ref Response
-            , Text " from their hand to play for the round."
+            , Text " para jogar na rodada."
             ]
 
         RulesJudging ->
-            [ Text "The answers are then shuffled and the "
+            [ Text "As respostas são embaralhadas e então o "
             , Ref Czar
-            , Text " reads them out to the other players—for full effect, the "
+            , Text " as lê para os demais jogadores — de preferência, o "
             , Ref Czar
-            , Text " should usually re-read the "
+            , Text " deve ler novamente a "
             , Ref Call
-            , Text " before presenting each answer. The "
+            , Text " antes de cada resposta. O "
             , Ref Czar
-            , Text " then picks the funniest play, and whoever played it gets one "
+            , Text " então escolhe a resposta mais divertida, e quem a jogou ganha  "
             , Ref Point
             , Text "."
             ]
@@ -161,35 +161,35 @@ translate mdString =
             [ Ref (Pick { numberOfCards = 2 }) ]
 
         RulesPick ->
-            [ Text "Some cards will need more than one "
+            [ Text "Algumas cartas vão precisar de mais de uma "
             , Ref Response
-            , Text " as an answer. Play the cards in the order the "
+            , Text " como resposta. Jogue as cartas na ordem em que o "
             , Ref Czar
-            , Text " should read them—the order matters."
+            , Text " dever ler — a ordem é importante!."
             ]
 
         ExamplePickDescription ->
             [ Ref (Plural { singular = Call, amount = Nothing })
-            , Text " like this will require picking more "
+            , Text " como esta requerem pegar mais "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text ", but give you more to pick from."
+            , Text ", mas te dão mais opções para escolher."
             ]
 
         RulesDraw ->
-            [ Text "Some "
+            [ Text "Algumas "
             , Ref (Plural { singular = Call, amount = Nothing })
-            , Text " will need even more "
+            , Text " vão precisar de ainda mais "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text "—these will say "
+            , Text " — essas vão dizer "
             , Ref (Draw { numberOfCards = 2 })
-            , Text " or more, and you’ll get that many extra cards before you play."
+            , Text " ou mais, e você deve receber esta quantidade de cartas antes da sua jogada."
             ]
 
         GameRulesTitle ->
-            [ Text "Game Rules" ]
+            [ Text "Regras do Jogo" ]
 
         HouseRulesTitle ->
-            [ Text "House Rules" ]
+            [ Text "Regras da Casa" ]
 
         HouseRules ->
             [ Text "You can change the way the game is played in a variety of ways. While setting up the game, choose "

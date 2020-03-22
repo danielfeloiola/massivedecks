@@ -119,7 +119,7 @@ translate mdString =
 
         -- Rules
         CardsAgainstHumanity ->
-            [ Text "Cards Against Humanity" ]
+            [ Text "Cartas Contra a Humanidade" ]
 
         Rules ->
             [ Text "Como jogar." ]
@@ -298,7 +298,7 @@ translate mdString =
             [ Text "Não encontrou o seu idioma? ", Ref TranslationBeg ]
 
         TranslationBeg ->
-            [ Text "Ajude a traduzir "
+            [ Text "Ajude a traduzir o "
             , Ref MassiveDecks
             , Text "!"
             ]
@@ -307,16 +307,16 @@ translate mdString =
             [ Text "Cartas compactas" ]
 
         CardSizeExplanation ->
-            [ Text "Ajuste o tamanho das castas — útil em telas pequenas para evitar a rolagem." ]
+            [ Text "Ajuste o tamanho das cartas — útil em telas pequenas para evitar a rolagem." ]
 
         SpeechSetting ->
-            [ Text "Text to Speech" ]
+            [ Text "Séntese de fala" ]
 
         SpeechExplanation ->
-            [ Text "Lê as cartas usando text to speech." ]
+            [ Text "Lê as cartas usando síntese de fala." ]
 
         SpeechNotSupportedExplanation ->
-            [ Text "Seu navegador não suporta text to speech, ou não tem nenhuma voz instalada." ]
+            [ Text "Seu navegador não suporta síntese de fala, ou não tem nenhuma voz instalada." ]
 
         VoiceSetting ->
             [ Text "Speech Voice" ]
@@ -332,19 +332,19 @@ translate mdString =
             [ Text "Seu navegador não suporta notificações." ]
 
         NotificationsBrowserPermissions ->
-            [ Text "You will need to give permission for "
+            [ Text "Você vai precisar dar parmissão para "
             , Ref MassiveDecks
-            , Text " to notify you. This will only be used while the game is open and while you have this enabled."
+            , Text " te notificar. As notificações só aparecerão quando o jogo estiver aberto e com esta opção ativada."
             ]
 
         NotificationOnlyWhenHiddenSetting ->
-            [ Text "Only When Hidden" ]
+            [ Text "Apenas quando oculto" ]
 
         NotificationsOnlyWhenHiddenExplanation ->
-            [ Text "Only send notifications when you are not looking at the page (e.g: on another tab or minimised)." ]
+            [ Text "Apenas manda notificações quando vocês não está olhando para a página (ex.: em outra aba)." ]
 
         NotificationsOnlyWhenHiddenUnsupportedExplanation ->
-            [ Text "Your browser doesn't support checking for page visibility." ]
+            [ Text "Seu navegador não suporta checar a visibilidade." ]
 
         -- Terms
         Czar ->

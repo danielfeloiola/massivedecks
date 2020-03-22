@@ -878,49 +878,49 @@ translate mdString =
             [ Text "View previous rounds from this game." ]
 
         ViewHelpAction ->
-            [ Text "Help" ]
+            [ Text "Ajuda" ]
 
         EnforceTimeLimitAction ->
             [ Text "Set all players the game is waiting on to away and skip them until they return." ]
 
         Blank ->
-            [ Text "Blank" ]
+            [ Text "Em branco" ]
 
         RoundStarted ->
-            [ Text "Round Started" ]
+            [ Text "A rodada começou" ]
 
         JudgingStarted ->
-            [ Text "Judging Started" ]
+            [ Text "Julgando" ]
 
         Paused ->
-            [ Text "The game has been paused because there are not enough active players to continue."
-            , Text "When someone joins or returns it will continue automatically."
+            [ Text "O jogo está pausado pois não há jogadores ativos suficientes."
+            , Text "Quando alguém voltar ou entrar na partida ela continuará automaticamente."
             ]
 
         ClientAway ->
-            [ Text "You are currently set as away from the game, and are not playing." ]
+            [ Text "Você está marcado como fora do jogo e não está jogando." ]
 
         -- Instructions
         PlayInstruction { numberOfCards } ->
-            [ Text "You need to choose "
+            [ Text "Você precisa escolher "
             , Text (asWord numberOfCards)
-            , Text " more "
+            , Text " mais "
             , Ref (Plural { singular = Response, amount = Just numberOfCards })
-            , Text " from your hand into this round before you can submit your play."
+            , Text " cardas da sua mão para esta rodada."
             ]
 
         SubmitInstruction ->
-            [ Text "You need to submit your play for this round." ]
+            [ Text "Você precisa confirmar as cartas que vai enviar nesta rodada." ]
 
         WaitingForPlaysInstruction ->
-            [ Text "You are waiting for other players to play into the round." ]
+            [ Text "Você está esperando os demais jogadores concluírem as suas jogadas de rodada." ]
 
         CzarsDontPlayInstruction ->
-            [ Text "You are the "
+            [ Text "Você é o "
             , Ref Czar
-            , Text " for the round - you don't submit any "
+            , Text " desta rodada - Não envie nenhuma "
             , Ref (Plural { singular = Response, amount = Nothing })
-            , Text ". Instead you choose the winner once everyone else has submitted theirs."
+            , Text ". Você escolherá quem vai ganhar a rodada assim que todos enviarem suas jogadas."
             ]
 
         NotInRoundInstruction ->

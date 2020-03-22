@@ -724,16 +724,16 @@ translate mdString =
             [ Text "Número de cartas que cada jogador tem um sua mão durante o jogo." ]
 
         ScoreLimit ->
-            [ Ref Point, Text " Limit" ]
+            [ Text "Limite de ", Ref Point ]
 
         ScoreLimitDescription ->
             [ Segment
-                [ Text "The number of "
+                [ Text "O número de "
                 , Ref (Plural { singular = Point, amount = Nothing })
-                , Text " a player needs to win the game."
+                , Text " que um jogador precisa para ganhar a partida."
                 ]
             , Text " "
-            , Segment [ Text "Se desativada o jogo continuará indefinidamente." ]
+            , Segment [ Text "Se esta opção for desativada o jogo continuará indefinidamente." ]
             ]
 
         UnsavedChangesWarning ->
@@ -742,7 +742,7 @@ translate mdString =
             ]
 
         SaveChanges ->
-            [ Text "Save your changes." ]
+            [ Text "Salvar suas mudanças." ]
 
         RevertChanges ->
             [ Text "Descartar mudanças não salvas." ]

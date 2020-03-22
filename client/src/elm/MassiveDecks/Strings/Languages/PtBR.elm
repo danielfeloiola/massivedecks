@@ -821,30 +821,30 @@ translate mdString =
             [ Ref stage, Text " Limite de tempo" ]
 
         PlayingTimeLimitDescription ->
-            [ Text "How long (in seconds) the ", Ref Players, Text " have to make their plays." ]
+            [ Text "Quanto tempo (em segundos) o ", Ref Players, Text " tem para fazer suas jogadas." ]
 
         RevealingTimeLimitDescription ->
-            [ Text "How long (in seconds) the ", Ref Czar, Text " has to reveal the plays." ]
+            [ Text "Quanto tempo (em segundos) the ", Ref Czar, Text " tem para revelar as jogadas." ]
 
         JudgingTimeLimitDescription ->
-            [ Text "How long (in seconds) the ", Ref Czar, Text " has to judge the plays." ]
+            [ Text "Quanto tempo (em segundos) the ", Ref Czar, Text " tem para julgar as jogadas." ]
 
         CompleteTimeLimitDescription ->
-            [ Text "How much time (in seconds) to wait after one round ends before starting the next one." ]
+            [ Text "Quanto tempo (em segundos) esperar depois de uma rodada antes de começar a próxima." ]
 
         Conflict ->
-            [ Text "Conflict" ]
+            [ Text "Conflito" ]
 
         ConflictDescription ->
-            [ Text "Someone else made changes to this while you were also making changes. "
-            , Text "Please choose if you want to keep your changes or theirs."
+            [ Text "Alguém fez mudanças enquanto você também fazia mudanças. "
+            , Text "Escolha se você quer usar as suas configurações ou as dos outros."
             ]
 
         YourChanges ->
-            [ Text "Suas mudanças" ]
+            [ Text "Suas configurações" ]
 
         TheirChanges ->
-            [ Text "Mudanças dos outros" ]
+            [ Text "Configurações dos outros" ]
 
         -- Game
         SubmitPlay ->
@@ -860,19 +860,19 @@ translate mdString =
             [ Text "Add a like to this play." ]
 
         AdvanceRound ->
-            [ Text "Next round." ]
+            [ Text "Próxima rodada." ]
 
         Playing ->
-            [ Text "Playing" ]
+            [ Text "Jogando" ]
 
         Revealing ->
-            [ Text "Revealing" ]
+            [ Text "Revelando" ]
 
         Judging ->
-            [ Text "Judging" ]
+            [ Text "Julgando" ]
 
         Complete ->
-            [ Text "Finished" ]
+            [ Text "Terminado" ]
 
         ViewGameHistoryAction ->
             [ Text "View previous rounds from this game." ]

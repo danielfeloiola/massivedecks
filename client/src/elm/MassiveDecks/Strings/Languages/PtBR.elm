@@ -319,7 +319,7 @@ translate mdString =
             [ Text "Seu navegador não suporta síntese de fala, ou não tem nenhuma voz instalada." ]
 
         VoiceSetting ->
-            [ Text "Speech Voice" ]
+            [ Text "Voz" ]
 
         NotificationsSetting ->
             [ Text "Notificações no navegador" ]
@@ -332,7 +332,7 @@ translate mdString =
             [ Text "Seu navegador não suporta notificações." ]
 
         NotificationsBrowserPermissions ->
-            [ Text "Você vai precisar dar parmissão para "
+            [ Text "Você vai precisar dar parmissão para  "
             , Ref MassiveDecks
             , Text " te notificar. As notificações só aparecerão quando o jogo estiver aberto e com esta opção ativada."
             ]
@@ -375,7 +375,7 @@ translate mdString =
             [ Text "Awesome Point" ]
 
         PointDescription ->
-            [ Text "A point—having more means winning." ]
+            [ Text "Um ponto — quem tiver mais ganha." ]
 
         GameCodeTerm ->
             [ Text "Código do Jogo" ]
@@ -405,40 +405,40 @@ translate mdString =
             [ Text "Jogou" ]
 
         PlayedDescription ->
-            [ Text "This player has submitted their play for the round." ]
+            [ Text "Este jogador já jogou a sua carta para esta rodada." ]
 
         -- Lobby Browser
         LobbyBrowserTitle ->
-            [ Text "Public Games" ]
+            [ Text "Partidas públicas" ]
 
         NoPublicGames ->
-            [ Text "No public games available." ]
+            [ Text "Nenhum jogo público disponível." ]
 
         PlayingGame ->
-            [ Text "Games that are in progress." ]
+            [ Text "Partidas acontecendo agora." ]
 
         SettingUpGame ->
-            [ Text "Games that have not yet started." ]
+            [ Text "Partidas que ainda não começaram." ]
 
         StartYourOwn ->
-            [ Text "Start a new game?" ]
+            [ Text "Começar um novo jogo?" ]
 
         -- Spectation
         JoinTheGame ->
-            [ Text "Join the game!" ]
+            [ Text "Entrar no jogo!" ]
 
         ToggleAdvertDescription ->
-            [ Text "Toggle showing the information on joining the game." ]
+            [ Text "Alternar mostrando as informações sobre como ingressar no jogo." ]
 
         -- Cards
         Pick numberOfCards ->
-            [ Text "Pick", Ref (NumberOfCards numberOfCards) ]
+            [ Text "Escolher", Ref (NumberOfCards numberOfCards) ]
 
         Draw numberOfCards ->
-            [ Text "Draw", Ref (NumberOfCards numberOfCards) ]
+            [ Text "Tirar", Ref (NumberOfCards numberOfCards) ]
 
         PickDescription { numberOfCards } ->
-            [ Text "You need to play "
+            [ Text "Você precisa jogar "
             , Text (asWord numberOfCards)
             , Text " "
             , Ref (Plural { singular = Response, amount = Just numberOfCards })
@@ -446,11 +446,11 @@ translate mdString =
             ]
 
         DrawDescription { numberOfCards } ->
-            [ Text "You get "
+            [ Text "Você recebe "
             , Text (asWord numberOfCards)
             , Text " extra "
             , Ref (Plural { singular = Response, amount = Just numberOfCards })
-            , Text " before playing."
+            , Text " antes de jogar."
             ]
 
         NumberOfCards { numberOfCards } ->
@@ -458,10 +458,10 @@ translate mdString =
 
         -- Lobby
         Invite ->
-            [ Text "Invite players to the game." ]
+            [ Text "Convidar jogadores para a partida." ]
 
         InviteLinkHelp ->
-            [ Text "Send this link to players to invite them to the game, or let them scan the QR code below." ]
+            [ Text "Envie este link para os demais jogadores para convidá-los, ou peça que escaneiem o QR code abaixo." ]
 
         InviteExplanation { gameCode, password } ->
             let
@@ -469,7 +469,7 @@ translate mdString =
                     password
                         |> Maybe.map
                             (\p ->
-                                [ Text " and the game password “"
+                                [ Text " e a senha do jogo “"
                                 , Text p
                                 , Text "”"
                                 ]
@@ -477,11 +477,11 @@ translate mdString =
                         |> Maybe.withDefault []
             in
             List.concat
-                [ [ Text "Your game code is "
+                [ [ Text "O código do jogo é "
                   , Ref (GameCode { code = gameCode })
-                  , Text ". Players can join the game by loading "
+                  , Text ". Jogadores podem entrar no jogo ao entrarem em "
                   , Ref MassiveDecks
-                  , Text " and entering that code"
+                  , Text " e digitar esse código"
                   ]
                 , extra
                 , [ Text "."
@@ -568,13 +568,13 @@ translate mdString =
             [ Text "Convidar jogadores" ]
 
         InvitePlayersDescription ->
-            [ Text "Get the game code/link/qr code to let others join this game." ]
+            [ Text "Pegue o código/link/QR Code que permite jogadores acessar o jogo." ]
 
         SetAway ->
-            [ Text "Mark As Away" ]
+            [ Text "MArcar como fora" ]
 
         SetBack ->
-            [ Text "Mark As Back" ]
+            [ Text "Voltar para a partida" ]
 
         LeaveGame ->
             [ Text "Sair do jogo" ]
@@ -610,7 +610,7 @@ translate mdString =
             [ Text "Voltar" ]
 
         ReturnViewToGameDescription ->
-            [ Text "Volter para a tela principal do jogo." ]
+            [ Text "Voltar para a tela principal do jogo." ]
 
         ViewConfgiuration ->
             [ Text "Configurar" ]
@@ -737,8 +737,8 @@ translate mdString =
             ]
 
         UnsavedChangesWarning ->
-            [ Text "You have unsaved changes to the configuration, they must be saved first if you want them to apply "
-            , Text "to the game."
+            [ Text "Você tem alterações não salvas na configuração, elas devem ser salvas primeiro se você deseja que elas sejam aplicadas "
+            , Text "ao jogo."
             ]
 
         SaveChanges ->
@@ -778,11 +778,11 @@ translate mdString =
             ]
 
         PasswordNotSecured ->
-            [ Text "Game passwords are "
-            , Em [ Text "not" ]
-            , Text " stored securely—given this, please "
-            , Em [ Text "do not" ]
-            , Text " use serious passwords you use elsewhere!"
+            [ Text "As senhas  "
+            , Em [ Text "não" ]
+            , Text " sao armazenadas de forma segura, "
+            , Em [ Text "não" ]
+            , Text " use senhas que você utiliza em outro lugar!"
             ]
 
         LobbyPassword ->
@@ -813,12 +813,12 @@ translate mdString =
             [ Text "Automatically Mark Players As Away" ]
 
         AutomaticDescription ->
-            [ Text "If enabled, when the time limit runs out players will automatically be marked as away. "
-            , Text "Otherwise someone will need to press the button to do so."
+            [ Text "Se ativado, quando o tempo acabar, os jogadores serão automaticamente marcados como ausentes. "
+            , Text "Caso contrário, alguém precisará pressionar o botão para fazer isso."
             ]
 
         TimeLimit { stage } ->
-            [ Ref stage, Text " Time Limit" ]
+            [ Ref stage, Text " Limite de tempo" ]
 
         PlayingTimeLimitDescription ->
             [ Text "How long (in seconds) the ", Ref Players, Text " have to make their plays." ]
